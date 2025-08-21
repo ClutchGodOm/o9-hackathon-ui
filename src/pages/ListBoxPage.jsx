@@ -7,6 +7,7 @@ import {
 } from '@progress/kendo-react-listbox';
 import ChatPane from '../components/ChatPane';
 import { useInspector } from '../hooks/useInspector'; // Your custom hook
+import { Button } from '@progress/kendo-react-buttons';
 import './ListBoxPage.css';
 
 const initialData = [
@@ -128,6 +129,15 @@ const ListBoxPage = () => {
       <div className="main-content">
         <h2>Kendo ListBox - Employees vs Developers</h2>
         <p>This is an example of a component developers might need to debug or modify.</p>
+
+        <Button 
+          icon="download" 
+          primary={true} 
+          onClick={() => console.log('Export button clicked!')}
+          style={{ marginBottom: '20px' }}
+        >
+          Export Data
+        </Button>
 
         {/* The data-source-loc attribute for inspection */}
         <div className="listbox-grid" data-source-loc="src/pages/ListBoxPage.jsx:75">
